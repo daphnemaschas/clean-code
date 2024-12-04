@@ -1,6 +1,6 @@
 import argparse
 
-from src.gilded_rose import GildedRose, Item
+from gilded_rose import GildedRose, Item
 
 
 def parse_arguments():
