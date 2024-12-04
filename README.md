@@ -2,23 +2,9 @@
 
 Follow these steps to set up the project on your machine.
 
-## <span style="color:#5D6D7E;">Step 1: Clone the Repository</span>
+## <span style="color:#5D6D7E;">Step 1: Install uv</span>
 
-First, download the repository to your local machine. Open your terminal or command prompt and run:
-
-```bash
-git clone https://github.com/louis-marx/clean-code.git
-````
-
-Then navigate to the project folder:
-
-```bash
-cd clean-code
-```
-
-## <span style="color:#5D6D7E;">Step 2: Install uv</span>
-
-uv is used to manage dependencies and environments. If you don’t have uv installed, follow the instructions below:
+uv is used to manage dependencies and environments. If you don’t have uv installed, follow the instructions below (you can also choose your preferred installation procedure from the [official documentation](https://docs.astral.sh/uv/getting-started/installation/)):
 
 ### <span style="color:#F5C078;">For macOS and Linux</span>
 
@@ -32,40 +18,54 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
 ```
 
-After installation, verify that uv is installed by running:
+After installation, close your terminal and open a new one to verify that uv is installed by running:
 
 ```bash
-uv --version
+uv
+```
+```bash
+An extremely fast Python package manager.
+
+Usage: uv [OPTIONS] <COMMAND>
+
+...
 ```
 
-You should see the installed version of uv.
+## <span style="color:#5D6D7E;">Step 2: Clone the Repository</span>
 
-## <span style="color:#5D6D7E;">Step 3: Set Up the Environment</span>
-
-Inside the project folder, follow these steps to set up your environment:
-
-1. Create and activate a new environment using uv:
+First, download the repository to your local machine. Open your terminal or command prompt and run:
 
 ```bash
-uv env install
-```
+git clone https://github.com/louis-marx/clean-code.git
+````
 
-2. Install all the project dependencies:
+Then navigate to the project folder:
 
 ```bash
-uv install
+cd clean-code
 ```
 
-This command ensures that all required libraries are installed and ready to use.
-
-## <span style="color:#5D6D7E;">Step 4: Run Tests</span>
+## <span style="color:#5D6D7E;">Step 3: Run Tests</span>
 
 This project uses pytest for testing. To verify that everything is set up correctly, run:
 
 ```bash
-pytest
+uv run pytest
 ```
+```bash
+Using CPython 3.12.7
+Creating virtual environment at: .venv
+Installed 4 packages in 7ms
+=================================== test session starts ====================================
+platform darwin -- Python 3.12.7, pytest-8.3.3, pluggy-1.5.0
+rootdir: /path/to/project/directory
+configfile: pyproject.toml
+collected 11 items                                                 
 
+tests/test_gilded_rose.py ...........                                                 [100%]
+
+==================================== 11 passed in 0.01s ====================================
+```
 
 # <span style="color:#5D6D7E;">Gilded Rose Requirements Specification</span>
 
