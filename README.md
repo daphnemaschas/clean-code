@@ -55,10 +55,10 @@ tests/test_gilded_rose.py ...........                                           
 ==================================== 11 passed in 0.01s ====================================
 ```
 
-You should also try to run the testtest fixture, for e.g. 10 days:
+You should also try to run the main.py file that rune the Gilded Rose inventory system, for e.g. 10 days:
 
 ```
-uv run src/texttest_fixture.py 10
+uv run main.py 10
 ```
 
 # <span style="color:#5D6D7E;">Gilded Rose Requirements Specification</span>
