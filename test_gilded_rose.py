@@ -1,6 +1,6 @@
 import pytest
 
-from src.gilded_rose import GildedRose, Item
+from gilded_rose import GildedRose, Item
 
 
 @pytest.mark.parametrize(
