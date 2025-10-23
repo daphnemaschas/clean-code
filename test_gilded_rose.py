@@ -34,5 +34,6 @@ def test_update_quality(name, sell_in, quality, expected_sell_in, expected_quali
     items = [Item(name, sell_in, quality)]
     gilded_rose = GildedRose(items)
     gilded_rose.update_quality()
-    assert items[0].sell_in == expected_sell_in
-    assert items[0].quality == expected_quality
+    updated_items = gilded_rose.items
+    assert updated_items[0].sell_in == expected_sell_in
+    assert updated_items[0].quality == expected_quality
